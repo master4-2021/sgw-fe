@@ -7,7 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       "/graphql": {
-        target: "http://sgw-alb-641860864.ap-southeast-1.elb.amazonaws.com/graphql",
+        target:
+          "http://sgw-alb-641860864.ap-southeast-1.elb.amazonaws.com/graphql",
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/graphql/, ""),
